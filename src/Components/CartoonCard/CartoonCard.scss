@@ -1,32 +1,33 @@
-.filter {
-  text-align: center;
-  margin-bottom: 5rem;
-
-  &__title {
-    font-weight: bold;
-    color: rgb(33, 33, 33);
-    margin-bottom: 2rem;
-  }
-  &__box {
-    gap: 2rem;
-  }
-  &__select {
-    font-family: "Nunito", normal;
-    font-weight: bold;
-    color: blue;
-    border: 1px solid darkblue;
-    margin: 0 1rem;
-    box-shadow: 1px 1px 10px darkblue;
-    cursor: pointer;
-  }
-}
-
 .cartoon {
   width: 100%;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   row-gap: 1.5rem;
+  margin-bottom: 1rem;
+
+  &__filter {
+    text-align: center;
+    margin-bottom: 7rem;
+  }
+  &__f-title {
+    font-weight: bold;
+    font-size: 2rem;
+    color: rgb(33, 33, 33);
+    margin-bottom: 2rem;
+  }
+  &__f-select {
+    font-family: "Nunito", normal;
+    font-weight: bold;
+    font-size: 1rem;
+    color: blue;
+    border: 1px solid darkblue;
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+    margin: 0 1rem;
+    box-shadow: 1px 1px 10px darkblue;
+    cursor: pointer;
+  }
 
   &__card {
     border: none;
@@ -109,5 +110,23 @@
   a {
     color: white;
     text-decoration: none;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .cartoon {
+    justify-content: center;
+  }
+  .cartoon__f-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+  }
+  .cartoon__f-select {
+    margin: 0 0.5rem;
+  }
+  .cartoon__f-option {
+    font-size: 0.75rem;
   }
 }

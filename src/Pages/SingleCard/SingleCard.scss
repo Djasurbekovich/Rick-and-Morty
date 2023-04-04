@@ -7,7 +7,7 @@
   &__img {
     display: flex;
   }
-  &__texts{
+  &__texts {
     padding-top: 1.5rem;
   }
   &__name {
@@ -25,7 +25,7 @@
     margin: 1.5rem 0;
     gap: 5rem;
   }
-  &__text{
+  &__text {
     font-weight: bold;
     font-size: 1rem;
     color: black;
@@ -77,5 +77,19 @@
     background-color: initial;
     border: none;
     cursor: pointer;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .single__wrap {
+    flex-direction: column;
+    gap: 0;
+    margin-bottom: 2rem;
+  }
+  .single__texts {
+    padding: 1.5rem 1rem 0;
+  }
+  .single__name {
+    margin-bottom: 2.5rem;
   }
 }

@@ -25,43 +25,34 @@ const CartoonCard = () => {
   return (
     <section>
       <Container>
-        <div className="filter">
-          <h2 className="filter__title" style={{ fontSize: "2rem" }}>
-            Filters
-          </h2>
-          <div className="filter__box">
-            <select
-              className="filter__select"
-              onChange={handleFilter}
-              style={{
-                fontSize: "1rem",
-                borderRadius: "0.5rem",
-                padding: "0.5rem 1rem",
-              }}>
-              <option className="filter__option">Filter by Status</option>
+        <div className="cartoon__filter">
+          <h2 className="cartoon__f-title">Filters</h2>
+          <div className="cartoon__f-box">
+            <select className="cartoon__f-select" onChange={handleFilter}>
+              <option className="cartoon__f-option">Filter by Status</option>
               {filter.map((item) => {
                 return (
-                  <option className="filter__option" value={item.status}>
+                  <option className="cartoon__f-option" value={item.status}>
                     {item.status}
                   </option>
                 );
               })}
+              <option className="cartoon__f-option">Alive</option>
+              <option className="cartoon__f-option">Dead</option>
+              <option className="cartoon__f-option">Unknown</option>
             </select>
-            <select
-              className="filter__select"
-              style={{
-                fontSize: "1rem",
-                borderRadius: "0.5rem",
-                padding: "0.5rem 1rem",
-              }}>
-              <option className="filter__option">Filter by Gender</option>
+            <select className="cartoon__f-select">
+              <option className="cartoon__f-option">Filter by Gender</option>
               {filter.map((item) => {
                 return (
-                  <option className="filter__option" value={item}>
+                  <option className="cartoon__f-option" value={item}>
                     {item}
                   </option>
                 );
               })}
+              <option className="cartoon__f-option">Male</option>
+              <option className="cartoon__f-option">Female</option>
+              <option className="cartoon__f-option">Unknown</option>
             </select>
           </div>
         </div>

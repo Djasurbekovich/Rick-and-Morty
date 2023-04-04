@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import Container from "../../Utils/Container/Container";
+import { instance } from "../../Api/instance";
 import { Link } from "react-router-dom";
 import { FiHeart } from "react-icons/fi";
 import "./LocationCard.scss";
-import { instance } from "../../Api/instance";
 
 const LocationCard = () => {
   const [getData, setGetData] = useState([]);
@@ -37,26 +37,22 @@ const LocationCard = () => {
   return (
     <section>
       <Container>
-        <div className="filter">
-          <h2 className="filter__title" style={{ fontSize: "2rem" }}>
+        <div className="location__filter">
+          <h2 className="location__f-title">
             Pick Location
           </h2>
           <select
-            className="filter__select"
-            onChange={handleFilter}
-            style={{
-              fontSize: "1.25rem",
-              padding: "0.5rem 2.5rem",
-              borderRadius: "0.5rem",
-            }}>
-            <option className="filter__option">Choose...</option>
+            className="location__f-select"
+            onChange={handleFilter}>
+            <option className="location__f-option">Choose...</option>
+            <option className="location__f-option">Earth (C-137)</option>
             {filter.map((item) => {
               return <option value={item.name}>{item.name}</option>;
             })}
           </select>
         </div>
         <div className="location">
-          {getData.map((item) => {
+          {/* {getData.map((item) => {
             return (
               <div className="location__titles" key={item.id}>
                 <h1 className="location__title">
@@ -71,7 +67,19 @@ const LocationCard = () => {
                 </h4>
               </div>
             );
-          })}
+          })} */}
+          <div className="location__titles">
+            <h1 className="location__title">
+              Location:<span className="location__span"> Earth (C-137) </span>
+            </h1>
+            <h3 className="location__dimension">
+              Dimension:
+              <span className="location__span"> Dimension C-137 </span>
+            </h3>
+            <h4 className="location__type">
+              Type:<span className="location__span"> Planet </span>
+            </h4>
+          </div>
           <div className="location__wrap">
             {results.map((item) => {
               return (

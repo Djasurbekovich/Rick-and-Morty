@@ -26,15 +26,22 @@
     font-size: 1.25rem;
     color: blue;
   }
-  a{
+  a {
     color: blue;
     text-decoration: none;
   }
-  a:hover{
+  a:hover {
     color: darkblue;
   }
-  a:focus{
+  a:focus {
     color: darkblue;
     text-decoration: underline;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .nav__wrap {
+    flex-direction: column;
+    row-gap: 1rem;
   }
 }

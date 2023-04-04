@@ -1,14 +1,40 @@
 .episode {
+  &__filter {
+    text-align: center;
+    margin-bottom: 7rem;
+  }
+  &__f-title {
+    font-weight: bold;
+    font-size: 2rem;
+    color: rgb(33, 33, 33);
+    margin-bottom: 2rem;
+  }
+  &__f-select {
+    font-family: "Nunito", normal;
+    font-weight: bold;
+    color: blue;
+    font-size: 1.25rem;
+    padding: 0.5rem 1.25rem;
+    border-radius: 0.5rem;
+    border: 1px solid darkblue;
+    box-shadow: 1px 1px 10px darkblue;
+    cursor: pointer;
+  }
+
   &__titles {
     text-align: center;
     margin-bottom: 3rem;
   }
   &__title {
-    font-size: 2rem;
+    font-weight: bold;
+    font-size: 2.25rem;
+    color: rgb(33, 33, 33);
     margin-bottom: 1rem;
   }
   &__date {
-    font-size: 1rem;
+    font-weight: bold;
+    font-size: 1.25rem;
+    color: rgb(33, 33, 33);
   }
   &__span {
     font-weight: bold;
@@ -20,6 +46,7 @@
     justify-content: space-between;
     flex-wrap: wrap;
     row-gap: 1.5rem;
+    margin: 5rem 0 1rem;
   }
   &__card {
     border: none;
@@ -107,5 +134,14 @@
   a {
     color: white;
     text-decoration: none;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .episode__f-option {
+    font-size: 0.75rem;
+  }
+  .episode__wrap {
+    justify-content: center;
   }
 }

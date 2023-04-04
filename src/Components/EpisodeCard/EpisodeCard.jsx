@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import Container from "../../Utils/Container/Container";
 import { instance } from "../../Api/instance";
-import "./EpisodeCard.scss";
 import { Link } from "react-router-dom";
 import { FiHeart } from "react-icons/fi";
+import "./EpisodeCard.scss";
 
 const EpisodeCard = () => {
   const [getData, setGetData] = useState([]);
@@ -37,20 +37,12 @@ const EpisodeCard = () => {
   return (
     <section>
       <Container>
-        <div className="filter">
-          <h2 className="filter__title" style={{ fontSize: "2rem" }}>
-            Pick Episode
-          </h2>
-          <div className="filter__box">
-            <select
-              className="filter__select"
-              onChange={handleFilter}
-              style={{
-                fontSize: "1.25rem",
-                padding: "0.5rem 2.5rem",
-                borderRadius: "0.5rem",
-              }}>
-              <option className="filter__option">Choose...</option>
+        <div className="episode__filter">
+          <h2 className="episode__f-title">Pick Episode</h2>
+          <div className="episode__f-box">
+            <select className="episode__f-select" onChange={handleFilter}>
+              <option className="episode__f-option">Choose...</option>
+              <option className="episode__f-option">Pilot</option>
               {filter.map((item) => {
                 return <option value={item.name}>{item.name}</option>;
               })}
@@ -58,7 +50,7 @@ const EpisodeCard = () => {
           </div>
         </div>
         <div className="episode">
-          {getData.map((item) => {
+          {/* {getData.map((item) => {
             return (
               <div className="episode__titles" key={item.id}>
                 <h1 className="episode__title">
@@ -71,7 +63,17 @@ const EpisodeCard = () => {
                 </h3>
               </div>
             );
-          })}
+          })} */}
+          <div className="episode__titles">
+            <h1 className="episode__title">
+              Location:
+              <span className="episode__span"> Pilot </span>
+            </h1>
+            <h3 className="episode__date">
+              Air Date:
+              <span className="episode__span"> December 2, 2013 </span>
+            </h3>
+          </div>
           <div className="episode__wrap">
             {results.map((item) => {
               return (
