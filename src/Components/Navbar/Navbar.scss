@@ -1,0 +1,40 @@
+.nav {
+  position: fixed;
+  width: 100%;
+  background-color: white;
+  padding: 2rem 0;
+  box-shadow: 1px 1px 10px rgb(33, 33, 33);
+  box-sizing: border-box;
+
+  &__wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__logo {
+    font-weight: bold;
+    font-size: 2rem;
+    color: rgb(33, 33, 33);
+  }
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+  &__item {
+    font-weight: bold;
+    font-size: 1.25rem;
+    color: blue;
+  }
+  a{
+    color: blue;
+    text-decoration: none;
+  }
+  a:hover{
+    color: darkblue;
+  }
+  a:focus{
+    color: darkblue;
+    text-decoration: underline;
+  }
+}

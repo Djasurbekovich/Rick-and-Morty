@@ -1,0 +1,81 @@
+.single {
+  &__wrap {
+    display: flex;
+    gap: 3rem;
+    padding-top: 12rem;
+  }
+  &__img {
+    display: flex;
+  }
+  &__texts{
+    padding-top: 1.5rem;
+  }
+  &__name {
+    font-weight: bold;
+    font-size: 2rem;
+    line-height: 2rem;
+    letter-spacing: 1px;
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  &__box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 1.5rem 0;
+    gap: 5rem;
+  }
+  &__text{
+    font-weight: bold;
+    font-size: 1rem;
+    color: black;
+  }
+  &__gender {
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: darkred;
+  }
+  &__status {
+    display: flex;
+    font-family: "Nunito", normal;
+    font-size: 1rem;
+    color: darkred;
+    background-color: initial;
+    border: 1px solid darkred;
+    border-radius: 0.5rem;
+  }
+  &__btns {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__back-btn {
+    font-family: "Nunito", normal;
+    font-size: 1.25rem;
+    color: white;
+    background-color: rgb(33, 33, 33);
+    border: none;
+    border-radius: 0.5rem;
+    padding: 5px 10px;
+    cursor: pointer;
+    &:hover {
+      background-color: black;
+    }
+    &:active {
+      box-shadow: 1px 1px 10px black;
+    }
+    a {
+      color: white;
+      text-decoration: none;
+    }
+  }
+  &__like-btn {
+    display: flex;
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: red;
+    background-color: initial;
+    border: none;
+    cursor: pointer;
+  }
+}

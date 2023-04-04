@@ -1,0 +1,114 @@
+.location {
+  &__titles {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  &__title {
+    font-size: 2rem;
+  }
+  &__dimension {
+    font-size: 1.25rem;
+    margin: 1rem 0;
+  }
+  &__type {
+    font-size: 1rem;
+  }
+  &__span {
+    font-weight: bold;
+    color: blue;
+  }
+  &__wrap {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 1.5rem;
+  }
+  &__card {
+    border: none;
+    border-radius: 0.5rem;
+    box-shadow: 1px 1px 10px grey;
+  }
+  &__img {
+    display: flex;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+  }
+  &__texts {
+    padding: 1rem;
+  }
+  &__name {
+    width: 268px;
+    font-weight: bold;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    letter-spacing: 1px;
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+  &__box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 1rem 0;
+  }
+  &__text {
+    font-weight: bold;
+    font-size: 1rem;
+    color: black;
+  }
+  &__gender {
+    font-weight: bold;
+    font-size: 1.25rem;
+    color: darkred;
+  }
+  &__status {
+    display: flex;
+    font-family: "Nunito", normal;
+    font-size: 1rem;
+    color: darkred;
+    background-color: initial;
+    border: 1px solid darkred;
+    border-radius: 0.5rem;
+  }
+  &__loc-name {
+    font-weight: bold;
+    font-size: 1rem;
+    color: blue;
+  }
+  &__btns {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1.5rem;
+  }
+  &__more-btn {
+    font-family: "Nunito", normal;
+    font-size: 1rem;
+    color: white;
+    background-color: #3870db;
+    border: none;
+    border-radius: 0.5rem;
+    padding: 5px 10px;
+    cursor: pointer;
+    &:hover {
+      background-color: blue;
+    }
+    &:active {
+      box-shadow: 1px 1px 10px darkblue;
+    }
+  }
+  &__like-btn {
+    display: flex;
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: red;
+    background-color: initial;
+    border: none;
+    cursor: pointer;
+  }
+  a {
+    color: white;
+    text-decoration: none;
+  }
+}
